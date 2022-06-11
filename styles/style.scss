@@ -5,132 +5,137 @@ $transparentWhite: hsla(0, 0%, 100%, 0.75);
 $veryLightGray: hsl(0, 0%, 95%);
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-size: 16px;    
-    font-family: 'Lexend Deca', sans-serif;
-    background-color: $veryLightGray;
-    color: $veryLightGray;
+  font-size: 16px;
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: $veryLightGray;
+  color: $veryLightGray;
 }
 
 main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5.5rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5.5rem 0rem;
+  min-height: 100vh;
 }
 
 .card-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
 }
 
 .card {
-    height: 27.625rem;
-    width: 20.375rem;
-    padding: 3rem;
+  height: 27.625rem;
+  width: 20.375rem;
+  padding: 3rem;
 
-    &-sedan {
-        background: url('../images/icon-sedans.svg') no-repeat;
-        background-color: $brightOrange;
-        border-radius: 10px 10px 0px 0px;
-        background-position: 3rem 3rem;
-    
-        button {
-            color: $brightOrange;
-        }
-    
-        button:hover {
-            background-color: $brightOrange;
-        }
-    }
+  &-sedan {
+    background: url('../images/icon-sedans.svg') no-repeat;
+    background-color: $brightOrange;
+    border-radius: 10px 10px 0px 0px;
+    background-position: 3rem 3rem;
 
-    &-suv {
-        background: url('../images/icon-suvs.svg') no-repeat;
-        background-color: $darkCyan;
-        background-position: 3rem 3rem;
-    
-        button {
-            color: $darkCyan;
-        }
-    
-        button:hover {
-            background-color: $darkCyan;
-        }
-    }
-
-    &-luxury {
-        background: url('../images/icon-luxury.svg') no-repeat;
-        background-color: $veryDarkCyan;
-        border-radius: 0px 0px 10px 10px;
-        background-position: 3rem 3rem;
-    
-        button {
-            color: $veryDarkCyan;
-        }
-    
-        button:hover {
-            background-color: $veryDarkCyan;
-        }
-    }
-
-    h2 {
-        font-family: 'Big Shoulders Display', cursive;
-        font-size: 40px;
-        margin-top: 4.5rem;
-        text-transform: uppercase;
-    }
-    
-    p {
-        color: $transparentWhite;
-        font-size: 15px;
-        line-height: 1.6;
-        margin-top: 2rem;
-    }
-    
     button {
-        margin-top: 2rem;
-        border-radius: 30px;
-        border-style: none;
-        background-color: $veryLightGray;
-        height: 3rem;
-        width: 9.125rem;
-        font-size: 15px;
-        font-weight: bold;
+      color: $brightOrange;
     }
-    
+
     button:hover {
-        border: $veryLightGray 2px solid;
-        color: $veryLightGray;
-        cursor: pointer;
+      background-color: $brightOrange;
     }
+  }
+
+  &-suv {
+    background: url('../images/icon-suvs.svg') no-repeat;
+    background-color: $darkCyan;
+    background-position: 3rem 3rem;
+
+    button {
+      color: $darkCyan;
+    }
+
+    button:hover {
+      background-color: $darkCyan;
+    }
+  }
+
+  &-luxury {
+    background: url('../images/icon-luxury.svg') no-repeat;
+    background-color: $veryDarkCyan;
+    border-radius: 0px 0px 10px 10px;
+    background-position: 3rem 3rem;
+
+    button {
+      color: $veryDarkCyan;
+    }
+
+    button:hover {
+      background-color: $veryDarkCyan;
+    }
+  }
+
+  h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 40px;
+    margin-top: 4.5rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $transparentWhite;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 2rem;
+  }
+
+  button {
+    margin-top: 2rem;
+    border-radius: 30px;
+    border-style: none;
+    background-color: $veryLightGray;
+    height: 3rem;
+    width: 9.125rem;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  button:hover {
+    border: $veryLightGray 2px solid;
+    color: $veryLightGray;
+    cursor: pointer;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-    .card-container {
-        grid-template-columns: 1fr 1fr 1fr;
+  main {
+    padding: 1rem 0rem;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    height: 31.25rem;
+    width: 19rem;
+
+    &-sedan {
+      border-radius: 10px 0px 0px 10px;
     }
 
-    .card {
-        height: 31.25rem;
-        width: 19rem;
-
-        &-sedan {
-            border-radius: 10px 0px 0px 10px;
-        }
-    
-        &-luxury {
-            border-radius: 0px 10px 10px 0px;
-        }
-
-        button {
-            margin-top: 5.5rem;
-        }
+    &-luxury {
+      border-radius: 0px 10px 10px 0px;
     }
+
+    button {
+      margin-top: 5.5rem;
+    }
+  }
 }

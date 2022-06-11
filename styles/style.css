@@ -23,6 +23,7 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 5.5rem 0rem;
+  min-height: 100vh;
 }
 
 .card-container {
@@ -118,6 +119,9 @@ main {
 }
 
 @media only screen and (min-width: 1024px) {
+  main {
+    padding: 1rem 0rem;
+  }
   .card-container {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
